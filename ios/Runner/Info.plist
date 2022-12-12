@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
-	<string>Flutter Cnblogs</string>
+	<string>Cnblogs</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -52,6 +52,5 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
-
 </dict>
 </plist>

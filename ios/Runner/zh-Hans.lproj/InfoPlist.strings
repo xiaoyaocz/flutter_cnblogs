@@ -5,3 +5,6 @@
   Created by xiaoyaocz on 2022/12/12.
   
 */
+"CFBundleDisplayName" = "博客园";
+"NSCameraUsageDescription" = "需要使用摄像头扫描二维码";
+"NSPhotoLibraryUsageDescription" = "保存图片至你的相册";

@@ -5,3 +5,6 @@
   Created by xiaoyaocz on 2022/12/12.
   
 */
+"CFBundleDisplayName" = "Cnblogs";
+"NSCameraUsageDescription" = "This app needs camera access to scan QR codes";
+"NSPhotoLibraryUsageDescription" = "Save pictures to your album";
