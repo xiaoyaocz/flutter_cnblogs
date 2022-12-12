@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+
+    <script>
+        @highlightJs
+    </script>
+    <style>
+        @style
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h2>@title</h2>
+        <a class="author" href="javascript:openAuthor()">
+            <img src="@avatar" alt="avatar" />
+            <div class="user">
+                <div class="username">@username</div>
+                <div class="puttime">@puttime</div>
+            </div>
+        </a>
+    </div>
+
+    <div class="content">
+        @content
+    </div>
+    <div class="bottom-info">
+        <p>@stat</p>
+        <p>@puttime</p>
+    </div>
+</body>
+<script>
+    @commonJs
+</script>
+
+</html>

@@ -1,0 +1,375 @@
+html {
+    background-color: #303030;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+p{
+      margin-block-start: 8px;
+   margin-block-end: 8px;
+}
+
+body {
+    line-height: 1.8;
+    font-size: 16px;
+    /* text-align: justify; */
+    padding: 8px;
+    word-wrap: break-word;
+    color: #fff;
+
+}
+p code {
+    line-height: 1.2;
+    font-family: consolas !important;
+    vertical-align: middle;
+    margin: 0 3px;
+    background-color: #424242 !important;
+    font-size: 14px !important;
+    padding: .2em .3em !important;
+    border-radius: 3px !important;
+    border: none !important;
+}
+
+a {
+    color: #2196f3;
+    word-wrap: break-word;
+    text-decoration: none;
+}
+
+.content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.cnblogs_code {
+    overflow: auto;
+    background-color: #424242;
+    border-radius: 4px;
+    padding: 4px;
+    font-size: 12px;
+}
+
+table {
+    overflow: auto;
+    border-collapse: collapse;
+    width: 100%;
+    overflow-x: auto;
+    border: 1px solid #878787 !important;
+    margin-bottom: 20px;
+    border-radius: 4px;
+}
+
+
+
+table th {
+    border-collapse: collapse;
+    border-right: 1px solid #878787 !important;
+    border-bottom: 1px solid #878787 !important;
+    background-color: #585858 !important;
+    padding: 4px 8px;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+}
+
+table td {
+    border-collapse: collapse;
+    border-right: 1px solid #878787 !important;
+    border-bottom: 1px solid #878787 !important;
+    padding: 4px 8px;
+    font-size: 12px;
+    font-weight: normal;
+    text-align: center;
+    word-break: break-all;
+}
+
+/* table tr:nth-child(odd) {
+    background-color: #757575 !important;
+} */
+
+table tr:nth-child(even) {
+    background-color: #585858 !important;
+}
+
+pre {
+    overflow: auto;
+}
+
+blockquote {
+    overflow: auto;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+    border-radius: 4px;
+    background-color: #424242;
+    padding: 8px;
+}
+
+
+ul li::marker {
+    color: #2196f3;
+
+}
+
+.skin-codinglife .bannerbar-mobile {
+    margin-bottom: -10px
+}
+
+#bannerbar img {
+    width: 100% !important;
+    max-width: 100% !important;
+    max-height: 70px
+}
+
+.formobile {
+    display: block
+}
+
+.forpc {
+    display: none !important
+}
+
+#blog_nav_rss {
+    display: none !important
+}
+
+#blog_nav_rss_image {
+    display: none !important
+}
+
+#blog_nav_newpost {
+    display: none !important
+}
+
+.cnblogs-post-body img,
+.blog_comment_body img {
+    max-width: 300px !important;
+    height: auto
+}
+
+
+#green_channel {
+    width: 100%
+}
+
+#cnblogs_post_body table[style] {
+    width: auto !important;
+    height: auto !important
+}
+
+#sidebar_search_box input[type=text] {
+    width: 260px
+}
+
+#cnblogs_post_body table {
+    display: block;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: regular;
+    max-height: 800px
+}
+
+#cnblogs_post_body table::-webkit-scrollbar:horizontal {
+    height: 12px
+}
+
+#cnblogs_post_body table::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+    border-radius: 10px;
+    background-color: #f5f5f5
+}
+
+#cnblogs_post_body table::-webkit-scrollbar {
+    width: 12px;
+    background-color: #f5f5f5
+}
+
+#cnblogs_post_body table::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+    background-color: #555
+}
+
+#cnblogs_c1,
+#cnblogs_c2 {
+    text-align: center;
+    margin: 10px auto 0 auto
+}
+
+#cnblogs_c1 {
+    width: 300px
+}
+
+#cnblogs_c2 img {
+    max-width: 100%;
+    height: auto
+}
+
+.cnblogs-markdown :not(pre, div, td)>code,
+.blogpost-body :not(pre, div, td)>code {
+    white-space: pre-wrap
+}
+
+.category-link-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr))
+}
+
+body.skin-lessismore {
+    min-width: auto
+}
+
+.skin-lessismore #home {
+    width: 100%
+}
+
+.skin-lessismore #mainContent {
+    float: none;
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0
+}
+
+.skin-lessismore #sideBarMain {
+    width: 100%
+}
+
+.skin-lessismore .forFlow {
+    margin: 10px
+}
+
+.skin-lessismore #green_channel {
+    width: 80%
+}
+
+.skin-lessismore #tbCommentBody {
+    width: 100%
+}
+
+.skin-simplememory #mainContent {
+    float: none;
+    margin-left: 0
+}
+
+.skin-simplememory #main {
+    padding: 10px
+}
+
+.skin-simplememory .forFlow {
+    margin: 0 10px
+}
+
+.skin-simplememory #sideBarMain {
+    width: 100%;
+    float: none;
+    padding: 10px;
+    margin-right: 0
+}
+
+.header h2 {
+    margin-block-start: 0;
+    margin-block-end: 12px;
+}
+
+.header .author {
+    display: flex;
+    flex-direction: row;
+    margin-block-end: 12px;
+    text-decoration: none;
+    color: #fff;
+}
+
+.header .author img {
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    margin-right: 12px;
+    align-self: center;
+
+}
+
+.header .author .user {
+    display: flex;
+    flex-direction: column;
+}
+
+.header .author .user .username {
+    font-size: 14px;
+}
+
+.header .author .user .puttime {
+    font-size: 12px;
+    color: grey;
+}
+
+.hljs {
+    background: #424242;
+    display: block;
+    font-family: "Courier New", sans-serif;
+    font-size: 12px;
+    border: 1px solid #878787;
+    padding: 5px;
+    border-radius: 3px;
+    overflow-x: auto;
+}
+
+.hljs-comment,
+.hljs-quote,
+.hljs-variable {
+    color: #b5b5b5;
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-built_in,
+.hljs-name,
+.hljs-tag {
+    color: #c678dd;
+}
+
+.hljs-string,
+.hljs-title,
+.hljs-section,
+.hljs-attribute,
+.hljs-literal,
+.hljs-template-tag,
+.hljs-template-variable,
+.hljs-type,
+.hljs-addition {
+    color: #98c379;
+}
+
+.hljs-deletion,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-meta {
+    color: #61aeee;
+}
+
+.hljs-doctag {
+    color: #c678dd;
+}
+
+.hljs-attr {
+    color: #d19a66;
+}
+
+.hljs-symbol,
+.hljs-bullet,
+.hljs-link {
+    color: #61aeee;
+}
+
+.hljs-emphasis {
+    font-style: italic;
+}
+
+.hljs-strong {
+    font-weight: bold;
+}
+.bottom-info{
+    border-top: 1px solid #80808029;
+    font-size: 12px;
+    color: grey;
+    display: flex;
+    flex-direction: row;
+   justify-content: space-between;
+}

@@ -1,0 +1,63 @@
+name: flutter_cnblogs
+version: 1.0.0+1
+publish_to: none
+description: A new Flutter project.
+environment: 
+  sdk: '>=2.18.2 <3.0.0'
+
+dependencies: 
+  # 图标
+  cupertino_icons: ^1.0.2
+  remixicon: ^1.0.0 #Remix图标
+
+  # 框架、工具
+  get: 4.6.5 #状态管理、路由管理、国际化
+  dio: 4.0.6 #网络请求
+  hive: 2.2.3 #持久化存储
+  hive_flutter: 1.1.0 #持久化存储
+  logger: 1.1.0 #日志
+  intl: 0.17.0 #国际化
+  flutter_dotenv: ^5.0.2 #ENV
+
+  #Widget
+  flutter_staggered_grid_view: 0.6.2 #瀑布流/GridView
+  flutter_easyrefresh: 2.2.2 #下拉刷新、上拉加载
+  extended_image: 6.3.1 #拓展Image,支持缓存
+  flutter_smart_dialog: 4.6.1+5 #各种弹窗 Toast/Dialog/Popup
+  lottie: ^1.4.3 #lottie动画
+  flutter_html: ^3.0.0-alpha.6 #HTML转widget
+  photo_view: ^0.14.0 #图片浏览
+  sticky_headers: ^0.3.0+2 #吸顶
+  flutter_markdown: ^0.6.13 #Markdown
+
+  #系统交互
+  package_info_plus: 3.0.1 #包信息
+  url_launcher: 6.1.6 #打开链接
+  share_plus: 6.0.1 #分享
+  path_provider: 2.0.11 #常用路径
+  cross_file: ^0.3.3+2 #跨平台文件
+  flutter_inappwebview: ^5.7.1 #WebView
+  permission_handler: ^10.0.0 #权限处理
+  image_gallery_saver: ^1.7.1 #图片保存到相册
+
+  flutter: 
+    sdk: flutter
+  flutter_localizations: 
+    sdk: flutter
+
+dev_dependencies: 
+  flutter_lints: ^2.0.0
+  flutter_test: 
+    sdk: flutter
+
+flutter: 
+  uses-material-design: true
+  assets: 
+    - .env
+    - assets/images/
+    - assets/lotties/
+    - assets/templates/
+    - assets/templates/js/
+    - assets/templates/blog/
+    - assets/templates/news/
+

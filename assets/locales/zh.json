@@ -1,0 +1,147 @@
+{
+    "app": {
+        "name": "博客园",
+        "slogan": "代码改变世界"
+    },
+    "settings": {
+        "language": "语言",
+        "theme": "主题",
+        "system_theme": "跟随系统",
+        "light_theme": "浅色",
+        "dark_theme": "深色"
+    },
+    "dialog": {
+        "tip": "提示",
+        "confirm": "确认",
+        "cancel": "取消",
+        "save":"保存",
+        "save_image_successful":"图片已保存至相册",
+        "save_image_failure":"保存失败"
+    },
+    "state": {
+        "empty": "列表为空，点击刷新",
+        "error": "加载错误，点击刷新\n@msg",
+        "not_login": "请先登录"
+    },
+    "network_status": {
+        "404": "服务器找不到请求的地址",
+        "401": "登录失效，请重新登录",
+        "403": "服务器拒绝请求",
+        "400": "错误的请求",
+        "500": "服务器出现错误",
+        "502": "服务器出现错误(502)",
+        "503": "服务器出现错误(503)",
+        "connection_fail": "连接服务器失败，请稍后再试",
+        "no_network": "无法连接服务器，请检查您的网络环境",
+        "request_error": "请求出现错误",
+        "operation_failed": "操作失败"
+    },
+    "permission":{
+        "photo":"相册",
+        "file":"文件读写",
+        "denied_msg":"请授予@permission权限"
+    },
+    "indexed": {
+        "blogs": "首页",
+        "news": "新闻",
+        "questions": "博问",
+        "statuses": "闪存",
+        "user": "我的"
+    },
+    "blogs_home": {
+        "new": "最新",
+        "mostliked": "10天推荐排行",
+        "mostread": "48小时阅读排行",
+        "picked": "精华",
+        "knowledge": "知识库",
+        "posttime": "发表于 @time"
+    },
+    "blog_content": {
+        "title": "博客内容",
+        "share": "分享",
+        "comment": "评论",
+        "collect": "收藏",
+        "browser": "浏览器打开",
+        "bookmarked":"已收藏此文章"
+    },
+    "blog_comment":{
+        "title": "评论",
+        "posttime": "发表于 @time"
+    },
+    "news_home": {
+        "new": "最新",
+        "hot": "热门",
+        "hot_week": "本周热门",
+        "recommended": "推荐",
+        "posttime": "发表于 @time"
+    },
+    "login": {
+        "title": "登录",
+        "success": "登录成功",
+        "failed": "登录失败"
+    },
+    "user_home": {
+        "seniority": "园龄：@seniority",
+        "theme": "显示主题",
+        "language": "显示语言",
+        "update": "检查更新",
+        "about": "关于应用",
+        "logout": "退出登录",
+        "logout_msg": "确定要退出登录吗?",
+        "my_blog": "我的博客",
+        "bookmark": "我的收藏",
+        "not_login": "未登录",
+        "to_login": "点击前往登录",
+        "about_msg": "版本：@version\\n作者：xiaoyaocz",
+        "github":"开源主页"
+    },
+    "statuses": {
+        "title": "闪存",
+        "all": "全站",
+        "comment": "回复我",
+        "mention": "提到我",
+        "recentcomment": "新回应",
+        "following": "关注",
+        "mycomment": "我回应",
+        "my": "我的"
+    },
+    "questions_home": {
+        "unsolved": "待解决",
+        "highscore": "高分",
+        "noanswer": "零回答",
+        "solved": "已解决",
+        "myquestion": "我的问题"
+    },
+    "statuses_detail": {
+        "title": "闪存详情",
+        "reply": "回复",
+        "comment_title": "评论(@count)",
+        "send_comment": "发表评论",
+        "delete":"删除",
+        "delete_tip":"确定要删除此闪存吗?",
+        "delete_comment":"确定要删除此评论吗?"
+    },
+    "add_statuses":{
+        "title":"发表闪存",
+        "tip":"说点什么吧",
+        "private":"设为私密",
+        "success":"发表成功"
+    },
+    "bookmark":{
+        "title":"我的收藏",
+        "addtime": "收藏于 @time",
+        "del":"删除",
+        "del_msg":"确定要删除此收藏吗？"
+    },
+    "add_comment":{
+        "title":"发表评论",
+        "tip":"说点什么吧",
+        "reply":"回复@name"
+    },
+    "about":{
+        "version":"当前版本：",
+        "not_new_version":"当前已经是最新版本",
+        "new_version":"发现新版本",
+        "update":"更新"
+    }
+}

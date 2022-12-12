@@ -1,0 +1,149 @@
+{
+    "app":{
+        "name":"Cnblogs",
+        "slogan":"Coding Changes the World"
+    },
+    "settings":{
+        "language":"Language",
+        "theme":"Theme",
+        "system_theme":"System",
+        "light_theme":"Light",
+        "dark_theme":"Dark"
+    },
+    "dialog": {
+        "tip": "Tip",
+        "confirm": "Confirm",
+        "cancel": "Cancel",
+        "save":"Save",
+        "save_image_successful":"Image saved to album",
+        "save_image_failure":"Save failure"
+    },
+    "state":{
+        "empty":"List is empty, click to refresh",
+        "error":"Loading error, click to refresh\n@msg",
+        "not_login":"Please login"
+    },
+    "network_status":{
+        "404":"Not found",
+        "401":"Unauthorized, please log in again",
+        "403":"Server rejects request",
+        "400":"Bad request",
+        "500":"Server error",
+        "502":"Server error(502)",
+        "503":"Server error(503)",
+        "connection_fail":"Failed to connect to the server, please try again later",
+        "no_network":"Unable to connect to the server, please check your network",
+        "request_error":"Request Error",
+        "operation_failed":"Operation Failed"
+    },
+    "permission":{
+        "photo":"Photo",
+        "file":"File Read and Write",
+        "denied_msg":"@permission permission is denied"
+    },
+    "indexed":{
+        "blogs":"Home",
+        "news":"News",
+        "questions":"Question",
+        "statuses":"Statuses",
+        "user":"Account"
+    },
+    "blogs_home":{
+        "new":"New",
+        "mostread":"MostRead",
+        "mostliked":"Recommend",
+        "picked":"Picked",
+        "knowledge":"Knowledge",
+        "posttime":"Published on  @time"
+    },
+    "blog_content":{
+        "title":"Content",
+        "share":"Share",
+        "comment":"Comment",
+        "collect":"Collect",
+        "browser":"Open with browser",
+        "bookmarked":"Bookmarked this article"
+    },
+    "blog_comment":{
+        "title": "Comment",
+        "posttime": "Published on @time"
+    },
+    "news_home":{
+        "new":"New",
+        "hot":"Hot",
+        "hot_week":"Week Hot",
+        "recommended":"Recommended",
+        "posttime":"Published on @time"
+    },
+    "login":{
+        "title":"Login",
+        "success":"Login successful",
+        "failed":"Login failure"
+    },
+    "user_home":{
+        "seniority":"Seniority：@seniority",
+        "theme":"Theme",
+        "language":"Language",
+        "update":"Update",
+        "about":"About",
+        "logout":"Logout",
+        "logout_msg":"Are you sure you want to log out?",
+        "my_blog":"My Blog",
+        "bookmark":"My Bookmark",
+        "not_login":"Not login",
+        "to_login":"Click to login",
+        "about_msg":"Version：@version\\nCreated by xiaoyaocz",
+        "github":"Github Page"
+    },
+    "statuses":{
+        "title":"Statuses",
+        "all":"All",
+        "comment":"Comment",
+        "mention":"Mention",
+        "recentcomment":"Recent Comment",
+        "following":"Following",
+        "mycomment":"My Comment",
+        "my":"My"
+    },
+    "questions_home": {
+        "unsolved": "Unsolved",
+        "highscore": "High Score",
+        "noanswer": "No Answer",
+        "solved": "Solved",
+        "myquestion": "My Question"
+    },
+    "statuses_detail": {
+        "title": "Detail",
+        "reply": "Reply",
+        "comment_title": "Comments(@count)",
+        "send_comment": "Comment",
+        "delete":"Delete",
+        "delete_tip":"Are you sure you want to delete this status?",
+        "delete_comment":"Are you sure you want to delete this comment?"
+    },
+    "add_statuses":{
+        "title":"Add Statuses",
+        "tip":"Statues comment",
+        "private":"Set to private"
+    },
+    "bookmark":{
+        "title":"Bookmarks",
+        "addtime": "Added at @time",
+        "del":"Delete",
+        "del_msg":"Are you sure you want to delete this bookmark?"
+    },
+    "add_comment":{
+        "title":"Send Comment",
+        "tip":"Comment content",
+        "reply":"Reply @name"
+    },
+    "about":{
+        "website":"Official Website",
+        "user_agreement":"User Agreement",
+        "privacy_policy":"Privacy Policy",
+        "version":"Current version:",
+        "not_new_version":"Currently the latest version",
+        "new_version":"New Version",
+        "update":"Update"
+    }
+}
