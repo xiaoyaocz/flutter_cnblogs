@@ -4,6 +4,9 @@
 
 基于[博客园开放API](https://api.cnblogs.com/help)开发；受制于API，部分功能可能并不完善。
 
+![浅色模式](/screenshot/screenshot_light.jpg)
+
+![深色模式](/screenshot/screenshot_dark.jpg)
 
 ## 开发
 
