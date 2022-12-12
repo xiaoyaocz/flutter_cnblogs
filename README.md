@@ -1,6 +1,7 @@
 # 博客园Flutter
 
 使用Flutter编写的博客园客户端，支持iOS及Android。
+
 基于[博客园开放API](https://api.cnblogs.com/help)开发；受制于API，部分功能可能并不完善。
 
 ## 框架
@@ -35,7 +36,4 @@
     - [ ] 评论
     - [ ] 删除评论
     - [ ] 更新评论
-- 其他
-    - [ ] 检查更新
-
 
