@@ -4,13 +4,25 @@
 
 基于[博客园开放API](https://api.cnblogs.com/help)开发；受制于API，部分功能可能并不完善。
 
-## 框架
+
+## 开发
+
+### 说明
+
+开发前请先[申请博客园API KEY](https://oauth.cnblogs.com/)，在根目录创建`.env`文件并写入以下内容
+
+```
+CLIENT_ID=【申请的CLIENT_ID】
+CLIENT_SECRET=【申请的CLIENT_SECRET】
+```
+
+### 框架
 
 - `GetX` 状态管理、路由管理、国际化
 - `Dio` 网络请求
 - `Hive` 数据存储
 
-## 目录结构
+### 目录结构
 
 - `app` 一些通用的类及样式
 - `services` 提供数据存储等服务
@@ -21,7 +33,7 @@
 - `routes` 路由定义
 - `models` 实体类
 
-## Todo
+## TODO
 
 - 博客
     - [ ] 检查博文收藏状态(API似乎有问题)

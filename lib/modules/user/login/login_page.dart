@@ -39,16 +39,19 @@ class LoginPage extends GetView<LoginController> {
               ),
             ),
           ),
-          Obx(
-            () => Offstage(
-              offstage: !controller.pageLoadding.value,
-              child: const Positioned.fill(
-                top: 0,
-                left: 0,
-                child: LinearProgressIndicator(),
+          Positioned.fill(
+            top: 0,
+            left: 0,
+            child: Obx(
+              () => Offstage(
+                offstage: !controller.pageLoadding.value,
+                child: Container(
+                  alignment: Alignment.topLeft,
+                  child: const LinearProgressIndicator(),
+                ),
               ),
             ),
-          )
+          ),
         ],
       ),
     );
