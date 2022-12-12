@@ -1,7 +1,6 @@
 name: flutter_cnblogs
-version: 1.0.0+1
-publish_to: none
-description: A new Flutter project.
+version: 1.0.1+10001
+description: "博客园Flutter客户端"
 environment: 
   sdk: '>=2.18.2 <3.0.0'
 
