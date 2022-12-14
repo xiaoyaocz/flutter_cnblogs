@@ -1,6 +1,6 @@
 {
-    "version": "1.0.1",
-    "version_num": 10001,
-    "version_desc": "首个版本",
-    "download_url": "https://github.com/xiaoyaocz/flutter_cnblogs"
+    "version": "1.0.2",
+    "version_num": 10002,
+    "version_desc": "1.支持搜索功能\n2.修复一些小问题",
+    "download_url": "https://github.com/xiaoyaocz/flutter_cnblogs/releases"
 }
