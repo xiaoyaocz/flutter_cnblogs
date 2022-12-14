@@ -65,6 +65,10 @@ class AppNavigator {
 
   /// 跳转至用户博客
   static Future toUserBlog(String blogApp) async {
+    if (blogApp.contains("cnblogs.com/")) {
+      blogApp = RegExp(r"cnblogs.com/(.*?)/").firstMatch(blogApp)?.group(1) ??
+          blogApp;
+    }
     return await Get.toNamed(
       RoutePath.kUserBlog,
       arguments: blogApp,
