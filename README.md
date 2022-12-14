@@ -8,6 +8,14 @@
 
 ![深色模式](/screenshot/screenshot_dark.jpg)
 
+## 安装
+
+- Android:
+    1. 前往[Releases](https://github.com/xiaoyaocz/flutter_cnblogs/releases/latest)下载app-release.apk安装即可
+- iOS:
+    1. 前往[Releases](https://github.com/xiaoyaocz/flutter_cnblogs/releases/latest)下载ios_no_sign.ipa
+    2. 使用Sideloadly、iTools等工具自行签名安装
+
 ## 开发
 
 ### 说明
@@ -38,11 +46,6 @@ CLIENT_SECRET=【申请的CLIENT_SECRET】
 
 ## TODO
 
-- 搜索
-    - [ ] 博文搜索
-    - [ ] 新闻搜索
-    - [ ] 博问搜索
-    - [ ] 知识库搜索
 - 博客
     - [ ] 检查博文收藏状态(API似乎有问题)
 - 新闻
