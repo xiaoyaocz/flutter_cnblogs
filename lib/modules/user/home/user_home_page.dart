@@ -8,7 +8,6 @@ import 'package:flutter_cnblogs/widgets/net_image.dart';
 import 'package:flutter_easyrefresh/easy_refresh.dart';
 import 'package:get/get.dart';
 import 'package:remixicon/remixicon.dart';
-import 'package:url_launcher/url_launcher.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
 class UserHomePage extends GetView<UserHomeController> {

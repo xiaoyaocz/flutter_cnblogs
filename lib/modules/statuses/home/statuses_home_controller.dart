@@ -1,7 +1,6 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_cnblogs/app/app_style.dart';
 import 'package:flutter_cnblogs/app/controller/base_controller.dart';
 import 'package:flutter_cnblogs/app/event_bus.dart';
 import 'package:flutter_cnblogs/generated/locales.g.dart';

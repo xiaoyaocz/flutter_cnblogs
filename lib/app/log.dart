@@ -16,7 +16,9 @@ class Log {
     try {
       debugLogs.insert(0, DebugLogModel(DateTime.now(), content, color: color));
     } catch (e) {
-      print(e);
+      if (kDebugMode) {
+        print(e);
+      }
     }
   }
 
