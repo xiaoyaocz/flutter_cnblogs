@@ -64,7 +64,9 @@ jobs:
         run: |
           mkdir build/ios/iphoneos/Payload
           cp -R build/ios/iphoneos/Runner.app build/ios/iphoneos/Payload/Runner.app
-          zip -q -r build/ios/iphoneos/ios_no_sign.ipa build/ios/iphoneos/Payload
+          cd build/ios/iphoneos/
+          zip -q -r ios_no_sign.ipa Payload
+          cd ../../..
       #上传IPA至Artifacts
       - name: Upload IPA to Artifacts
         uses: actions/upload-artifact@v3
