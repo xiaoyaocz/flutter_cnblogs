@@ -62,7 +62,8 @@
         "comment": "评论",
         "collect": "收藏",
         "browser": "浏览器打开",
-        "bookmarked":"已收藏此文章"
+        "bookmarked":"已收藏此文章",
+        "load_failure":"无法通过API加载此文章"
     },
     "blog_comment":{
         "title": "评论",
@@ -143,5 +144,21 @@
         "not_new_version":"当前已经是最新版本",
         "new_version":"发现新版本",
         "update":"更新"
+    },
+    "search":{
+        "title":"搜索",
+        "hint_text":"请输入关键字搜索",
+        "type_blog":"博客",
+        "type_news":"新闻",
+        "type_question":"博问",
+        "type_kb":"知识库",
+        "filter":"筛选",
+        "start_date":"开始日期",
+        "end_date":"结束日期",
+        "unlimit":"无限制",
+        "view":"浏览次数以上",
+        "research":"重新搜索",
+        "empty":"没有找到任何结果",
+        "date_error":"开始日期大于结束日期"
     }
 }

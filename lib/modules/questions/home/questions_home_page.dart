@@ -31,7 +31,7 @@ class QuestionsHomePage extends GetView<QuestionsHomeController> {
         ),
         actions: [
           IconButton(
-            onPressed: () {},
+            onPressed: controller.toSearch,
             icon: const Icon(Icons.search),
           )
         ],

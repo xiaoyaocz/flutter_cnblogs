@@ -8,6 +8,7 @@ import 'package:flutter_cnblogs/modules/blogs/home/blogs_list_controller.dart';
 import 'package:flutter_cnblogs/modules/blogs/home/knowledge/blogs_knowledge_controller.dart';
 
 import 'package:flutter_cnblogs/requests/blogs_request.dart';
+import 'package:flutter_cnblogs/routes/app_navigation.dart';
 import 'package:get/get.dart';
 
 class BlogsHomeController extends GetxController
@@ -58,6 +59,10 @@ class BlogsHomeController extends GetxController
       controller = Get.find<BlogsListController>(tag: tabs[tabIndex]);
     }
     controller.scrollToTopOrRefresh();
+  }
+
+  void toSearch() {
+    AppNavigator.toSearch(SearchType.blog);
   }
 
   @override

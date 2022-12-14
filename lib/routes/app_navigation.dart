@@ -4,6 +4,21 @@ import 'package:flutter_cnblogs/models/news/news_list_item_model.dart';
 import 'package:flutter_cnblogs/routes/route_path.dart';
 import 'package:get/get.dart';
 
+/// 搜索类型
+enum SearchType {
+  /// 博客
+  blog,
+
+  /// 新闻
+  news,
+
+  /// 博问
+  question,
+
+  /// 知识库
+  kb,
+}
+
 /// APP页面跳转封装
 /// * 需要参数的页面都应使用此类
 /// * 如不需要参数，可以使用Get.toNamed
@@ -104,6 +119,14 @@ class AppNavigator {
     return await Get.toNamed(
       RoutePath.kQuestionDetail,
       arguments: id,
+    );
+  }
+
+  /// 获取问题详情
+  static Future toSearch(SearchType type) async {
+    return await Get.toNamed(
+      RoutePath.kSearch,
+      arguments: type,
     );
   }
 }

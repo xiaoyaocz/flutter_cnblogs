@@ -48,6 +48,7 @@ class SearchItemModel {
   String? uri;
   String? id;
   String? avatar;
+  DateTime get postDateTime => DateTime.parse(publishTime);
 
   @override
   String toString() {

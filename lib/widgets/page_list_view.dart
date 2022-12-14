@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_cnblogs/app/controller/base_controller.dart';
 import 'package:flutter_cnblogs/widgets/status/app_empty_widget.dart';
 import 'package:flutter_cnblogs/widgets/status/app_error_widget.dart';
+import 'package:flutter_cnblogs/widgets/status/app_loadding_widget.dart';
 
 import 'package:flutter_cnblogs/widgets/status/app_not_login_widget.dart';
 import 'package:flutter_easyrefresh/easy_refresh.dart';
@@ -16,11 +17,13 @@ class PageListView extends StatelessWidget {
   final EdgeInsets? padding;
   final bool firstRefresh;
   final Function()? onLoginSuccess;
+  final bool showPageLoadding;
   const PageListView({
     required this.itemBuilder,
     required this.pageController,
     this.padding,
     this.firstRefresh = false,
+    this.showPageLoadding = false,
     this.separatorBuilder,
     this.onLoginSuccess,
     Key? key,
@@ -56,6 +59,10 @@ class PageListView extends StatelessWidget {
             child: AppEmptyWidget(
               onRefresh: () => pageController.refreshData(),
             ),
+          ),
+          Offstage(
+            offstage: !(showPageLoadding && pageController.pageLoadding.value),
+            child: const AppLoaddingWidget(),
           ),
           Offstage(
             offstage: !pageController.pageError.value,

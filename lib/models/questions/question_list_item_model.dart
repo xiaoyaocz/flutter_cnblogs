@@ -41,7 +41,7 @@ class QuestionListItemModel {
         viewCount: asT<int>(json['ViewCount'])!,
         title: asT<String>(json['Title'])!,
         content: asT<String>(json['Content'])!,
-        summary: asT<String>(json['Summary'])!,
+        summary: asT<String?>(json['Summary']) ?? "",
         questionUserInfo: QuestionUserInfoModel.fromJson(
             asT<Map<String, dynamic>>(json['QuestionUserInfo'])!),
         dateadded: asT<String>(json['DateAdded'])!,

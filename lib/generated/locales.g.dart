@@ -60,6 +60,7 @@ class LocaleKeys {
   static const blog_content_collect = 'blog_content_collect';
   static const blog_content_browser = 'blog_content_browser';
   static const blog_content_bookmarked = 'blog_content_bookmarked';
+  static const blog_content_load_failure = 'blog_content_load_failure';
   static const blog_comment_title = 'blog_comment_title';
   static const blog_comment_posttime = 'blog_comment_posttime';
   static const news_home_new = 'news_home_new';
@@ -121,6 +122,20 @@ class LocaleKeys {
   static const about_not_new_version = 'about_not_new_version';
   static const about_new_version = 'about_new_version';
   static const about_update = 'about_update';
+  static const search_title = 'search_title';
+  static const search_hint_text = 'search_hint_text';
+  static const search_type_blog = 'search_type_blog';
+  static const search_type_news = 'search_type_news';
+  static const search_type_question = 'search_type_question';
+  static const search_type_kb = 'search_type_kb';
+  static const search_filter = 'search_filter';
+  static const search_start_date = 'search_start_date';
+  static const search_end_date = 'search_end_date';
+  static const search_unlimit = 'search_unlimit';
+  static const search_view = 'search_view';
+  static const search_research = 'search_research';
+  static const search_empty = 'search_empty';
+  static const search_date_error = 'search_date_error';
   static const add_statuses_success = 'add_statuses_success';
 }
 
@@ -175,6 +190,7 @@ class Locales {
     'blog_content_collect': 'Collect',
     'blog_content_browser': 'Open with browser',
     'blog_content_bookmarked': 'Bookmarked this article',
+    'blog_content_load_failure': 'Unable to load this article via API',
     'blog_comment_title': 'Comment',
     'blog_comment_posttime': 'Published on @time',
     'news_home_new': 'New',
@@ -237,6 +253,20 @@ class Locales {
     'about_not_new_version': 'Currently the latest version',
     'about_new_version': 'New Version',
     'about_update': 'Update',
+    'search_title': 'Search',
+    'search_hint_text': 'Please enter keywords to search',
+    'search_type_blog': 'Blog',
+    'search_type_news': 'News',
+    'search_type_question': 'Question',
+    'search_type_kb': 'Knowledge',
+    'search_filter': 'Filter',
+    'search_start_date': 'Start Date',
+    'search_end_date': 'End Date',
+    'search_unlimit': 'Unlimit',
+    'search_view': 'More than Views',
+    'search_research': 'Re-search',
+    'search_empty': 'No results found',
+    'search_date_error': 'Start date is greater than end date',
   };
   static const zh = {
     'app_name': '博客园',
@@ -286,6 +316,7 @@ class Locales {
     'blog_content_collect': '收藏',
     'blog_content_browser': '浏览器打开',
     'blog_content_bookmarked': '已收藏此文章',
+    'blog_content_load_failure': '无法通过API加载此文章',
     'blog_comment_title': '评论',
     'blog_comment_posttime': '发表于 @time',
     'news_home_new': '最新',
@@ -344,5 +375,19 @@ class Locales {
     'about_not_new_version': '当前已经是最新版本',
     'about_new_version': '发现新版本',
     'about_update': '更新',
+    'search_title': '搜索',
+    'search_hint_text': '请输入关键字搜索',
+    'search_type_blog': '博客',
+    'search_type_news': '新闻',
+    'search_type_question': '博问',
+    'search_type_kb': '知识库',
+    'search_filter': '筛选',
+    'search_start_date': '开始日期',
+    'search_end_date': '结束日期',
+    'search_unlimit': '无限制',
+    'search_view': '浏览次数以上',
+    'search_research': '重新搜索',
+    'search_empty': '没有找到任何结果',
+    'search_date_error': '开始日期大于结束日期',
   };
 }

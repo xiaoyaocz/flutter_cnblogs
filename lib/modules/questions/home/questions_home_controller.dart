@@ -5,6 +5,7 @@ import 'package:flutter_cnblogs/app/controller/base_controller.dart';
 import 'package:flutter_cnblogs/app/event_bus.dart';
 import 'package:flutter_cnblogs/generated/locales.g.dart';
 import 'package:flutter_cnblogs/modules/questions/home/questions_list_controller.dart';
+import 'package:flutter_cnblogs/routes/app_navigation.dart';
 
 import 'package:get/get.dart';
 
@@ -45,6 +46,10 @@ class QuestionsHomeController extends GetxController
         Get.find<QuestionsListController>(tag: tabs[tabIndex]);
 
     controller.scrollToTopOrRefresh();
+  }
+
+  void toSearch() {
+    AppNavigator.toSearch(SearchType.news);
   }
 
   @override

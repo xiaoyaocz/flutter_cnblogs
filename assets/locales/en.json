@@ -62,7 +62,8 @@
         "comment":"Comment",
         "collect":"Collect",
         "browser":"Open with browser",
-        "bookmarked":"Bookmarked this article"
+        "bookmarked":"Bookmarked this article",
+        "load_failure":"Unable to load this article via API"
     },
     "blog_comment":{
         "title": "Comment",
@@ -145,5 +146,21 @@
         "not_new_version":"Currently the latest version",
         "new_version":"New Version",
         "update":"Update"
+    },
+    "search":{
+        "title":"Search",
+        "hint_text":"Please enter keywords to search",
+        "type_blog":"Blog",
+        "type_news":"News",
+        "type_question":"Question",
+        "type_kb":"Knowledge",
+        "filter":"Filter",
+        "start_date":"Start Date",
+        "end_date":"End Date",
+        "unlimit":"Unlimit",
+        "view":"More than Views",
+        "research":"Re-search",
+        "empty":"No results found",
+        "date_error":"Start date is greater than end date"
     }
 }

@@ -40,6 +40,7 @@ class BlogContentController extends BaseWebViewController {
       var result = await request.getBlogContent(url: url);
       //无法加载,使用WebView打开
       if (result.id == 0) {
+        SmartDialog.showToast(LocaleKeys.blog_content_load_failure.tr);
         Get.offAndToNamed(RoutePath.kWebView, arguments: url);
         return;
       }
