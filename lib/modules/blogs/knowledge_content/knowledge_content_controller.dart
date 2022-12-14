@@ -4,6 +4,7 @@ import 'package:flutter_cnblogs/app/controller/base_webview_controller.dart';
 import 'package:flutter_cnblogs/app/utils.dart';
 import 'package:flutter_cnblogs/models/blogs/knowledge_list_item_model.dart';
 import 'package:flutter_cnblogs/requests/blogs_request.dart';
+import 'package:flutter_inappwebview/flutter_inappwebview.dart';
 import 'package:get/get.dart';
 import 'package:share_plus/share_plus.dart';
 import 'package:url_launcher/url_launcher_string.dart';
@@ -14,9 +15,9 @@ class KnowledgeContentController extends BaseWebViewController {
   KnowledgeContentController(this.item);
 
   @override
-  void onInit() {
+  void onWebViewCreated(InAppWebViewController controller) {
+    super.onWebViewCreated(controller);
     loadData();
-    super.onInit();
   }
 
   Future loadData() async {

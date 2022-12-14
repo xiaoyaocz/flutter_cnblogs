@@ -9,6 +9,7 @@ import 'package:flutter_cnblogs/requests/blogs_request.dart';
 import 'package:flutter_cnblogs/requests/user_request.dart';
 import 'package:flutter_cnblogs/routes/app_navigation.dart';
 import 'package:flutter_cnblogs/routes/route_path.dart';
+import 'package:flutter_inappwebview/flutter_inappwebview.dart';
 import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 import 'package:get/get.dart';
 import 'package:share_plus/share_plus.dart';
@@ -27,10 +28,11 @@ class BlogContentController extends BaseWebViewController {
   var commentCount = 0.obs;
   var bookmarked = false.obs;
   BlogContentModel? detail;
+
   @override
-  void onInit() {
+  void onWebViewCreated(InAppWebViewController controller) {
+    super.onWebViewCreated(controller);
     loadData();
-    super.onInit();
   }
 
   Future loadData() async {
