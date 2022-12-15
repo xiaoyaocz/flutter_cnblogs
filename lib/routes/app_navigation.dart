@@ -129,11 +129,25 @@ class AppNavigator {
     );
   }
 
-  /// 获取问题详情
+  /// 搜索
   static Future toSearch(SearchType type) async {
     return await Get.toNamed(
       RoutePath.kSearch,
       arguments: type,
+    );
+  }
+
+  /// 跳转至回答评论
+  static Future toAnswerComment({
+    required int answerId,
+    required int questionId,
+  }) async {
+    return await Get.toNamed(
+      RoutePath.kAnswerComment,
+      parameters: {
+        "answerId": answerId.toString(),
+        "questionId": questionId.toString(),
+      },
     );
   }
 }

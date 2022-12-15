@@ -41,4 +41,7 @@ class RoutePath {
 
   /// 博问详情
   static const kQuestionDetail = "/question/detail";
+
+  /// 回答评论
+  static const kAnswerComment = "/question/answer/comment";
 }

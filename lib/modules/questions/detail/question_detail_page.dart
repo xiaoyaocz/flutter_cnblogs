@@ -5,6 +5,7 @@ import 'package:flutter_cnblogs/app/utils.dart';
 
 import 'package:flutter_cnblogs/models/questions/answer_list_item_model.dart';
 import 'package:flutter_cnblogs/modules/questions/detail/question_detail_controller.dart';
+import 'package:flutter_cnblogs/routes/app_navigation.dart';
 import 'package:flutter_cnblogs/widgets/custom_html.dart';
 import 'package:flutter_cnblogs/widgets/net_image.dart';
 import 'package:get/get.dart';
@@ -337,32 +338,40 @@ class QuestionDetailPage extends StatelessWidget {
   }
 
   Widget buildStat(AnswerListItemModel item) {
-    return Row(
-      mainAxisSize: MainAxisSize.min,
-      children: [
-        AppStyle.hGap16,
-        const Icon(
-          Remix.thumb_up_line,
-          size: 16,
-          color: Colors.grey,
-        ),
-        AppStyle.hGap4,
-        Text(
-          item.diggCount.toString(),
-          style: const TextStyle(fontSize: 14, color: Colors.grey),
-        ),
-        AppStyle.hGap24,
-        const Icon(
-          Remix.message_2_line,
-          size: 16,
-          color: Colors.grey,
-        ),
-        AppStyle.hGap4,
-        Text(
-          item.commentCounts.toString(),
-          style: const TextStyle(fontSize: 14, color: Colors.grey),
-        ),
-      ],
+    return GestureDetector(
+      onTap: () {
+        AppNavigator.toAnswerComment(
+          answerId: item.answerId,
+          questionId: questionId,
+        );
+      },
+      child: Row(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          AppStyle.hGap16,
+          const Icon(
+            Remix.thumb_up_line,
+            size: 16,
+            color: Colors.grey,
+          ),
+          AppStyle.hGap4,
+          Text(
+            item.diggCount.toString(),
+            style: const TextStyle(fontSize: 14, color: Colors.grey),
+          ),
+          AppStyle.hGap24,
+          const Icon(
+            Remix.message_2_line,
+            size: 16,
+            color: Colors.grey,
+          ),
+          AppStyle.hGap4,
+          Text(
+            item.commentCounts.toString(),
+            style: const TextStyle(fontSize: 14, color: Colors.grey),
+          ),
+        ],
+      ),
     );
   }
 }

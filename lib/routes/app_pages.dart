@@ -12,6 +12,8 @@ import 'package:flutter_cnblogs/modules/news/content/news_content_controller.dar
 import 'package:flutter_cnblogs/modules/news/content/news_content_page.dart';
 import 'package:flutter_cnblogs/modules/other/web_view/web_view_controller.dart';
 import 'package:flutter_cnblogs/modules/other/web_view/web_view_page.dart';
+import 'package:flutter_cnblogs/modules/questions/comment/answer_comment_controller.dart';
+import 'package:flutter_cnblogs/modules/questions/comment/answer_comment_page.dart';
 import 'package:flutter_cnblogs/modules/questions/detail/question_detail_page.dart';
 import 'package:flutter_cnblogs/modules/search/search_controller.dart';
 import 'package:flutter_cnblogs/modules/search/search_page.dart';
@@ -131,6 +133,17 @@ class AppPages {
         name: RoutePath.kQuestionDetail,
         preventDuplicates: false,
         page: () => QuestionDetailPage(questionId: Get.arguments),
+      ),
+      // 回答评论
+      GetPage(
+        name: RoutePath.kAnswerComment,
+        page: () => const AnswerCommentPage(),
+        binding: BindingsBuilder.put(
+          () => AnswerCommentController(
+            answerId: int.parse(Get.parameters["answerId"].toString()),
+            questionId: int.parse(Get.parameters["questionId"].toString()),
+          ),
+        ),
       ),
     ])
     //设置及其他
