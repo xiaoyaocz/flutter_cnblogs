@@ -41,7 +41,7 @@ class BaseWebViewController extends BaseController {
       InAppWebViewController controller, NavigationAction action) async {
     var uri = action.request.url!;
     var url = uri.toString();
-    if (url == "about:blank") {
+    if (url.startsWith("about:blank")) {
       return NavigationActionPolicy.ALLOW;
     }
     if (blogRegExp1.hasMatch(url)) {
