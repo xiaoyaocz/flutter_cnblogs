@@ -78,6 +78,9 @@ class AppNavigator {
   /// 跳转至WebView
   static Future toWebView(String url) async {
     Log.i(url);
+    if (url.isEmpty) {
+      return;
+    }
     final RegExp blogRegExp1 = RegExp(r'cnblogs.com/(.*?)/p/(.*?).html');
     final RegExp blogRegExp2 =
         RegExp(r'cnblogs.com/(.*?)/archive/\d+/\d+/\d+/(.*?).html');

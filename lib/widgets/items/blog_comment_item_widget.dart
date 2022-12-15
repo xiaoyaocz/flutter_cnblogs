@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_cnblogs/app/app_style.dart';
 import 'package:flutter_cnblogs/app/utils.dart';
 import 'package:flutter_cnblogs/models/blogs/blog_comment_item_model.dart';
+import 'package:flutter_cnblogs/routes/app_navigation.dart';
 import 'package:flutter_cnblogs/widgets/net_image.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
 
@@ -38,6 +39,9 @@ class BlogCommentItemWidget extends StatelessWidget {
                 ),
               ),
             ),
+            onTapLink: (text, href, title) {
+              AppNavigator.toWebView(href ?? '');
+            },
             imageBuilder: (uri, title, alt) {
               return NetImage(uri.toString());
             },

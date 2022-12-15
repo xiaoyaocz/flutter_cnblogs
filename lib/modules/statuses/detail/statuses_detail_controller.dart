@@ -15,6 +15,13 @@ class StatusesDetailController
   StatusesDetailController(this.id);
   final StatusesRequest request = StatusesRequest();
   Rx<StatusesListItemModel?> detail = Rx<StatusesListItemModel?>(null);
+
+  @override
+  void onInit() {
+    refreshData();
+    super.onInit();
+  }
+
   @override
   Future<List<StatusesCommentItemModel>> getData(int page, int pageSize) async {
     if (page > 1) {

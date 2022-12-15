@@ -4,6 +4,7 @@ import 'package:flutter_cnblogs/generated/locales.g.dart';
 import 'package:flutter_cnblogs/modules/statuses/detail/statuses_detail_controller.dart';
 import 'package:flutter_cnblogs/widgets/status/app_empty_widget.dart';
 import 'package:flutter_cnblogs/widgets/status/app_error_widget.dart';
+import 'package:flutter_cnblogs/widgets/status/app_loadding_widget.dart';
 import 'package:flutter_cnblogs/widgets/status/app_not_login_widget.dart';
 import 'package:flutter_cnblogs/widgets/items/statuses_comment_item_widget.dart';
 import 'package:flutter_cnblogs/widgets/items/statuses_item_widget.dart';
@@ -23,7 +24,6 @@ class StatusesDetailPage extends GetView<StatusesDetailController> {
       body: Obx(
         () => EasyRefresh(
           onRefresh: controller.refreshData,
-          firstRefresh: true,
           header: MaterialHeader(),
           child: ListView(
             padding: AppStyle.edgeInsetsA12,
@@ -68,6 +68,10 @@ class StatusesDetailPage extends GetView<StatusesDetailController> {
                           },
                         );
                       },
+                    ),
+                    Offstage(
+                      offstage: !controller.pageLoadding.value,
+                      child: const AppLoaddingWidget(),
                     ),
                     Offstage(
                       offstage: !controller.pageEmpty.value,
