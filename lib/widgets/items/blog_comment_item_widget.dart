@@ -43,7 +43,19 @@ class BlogCommentItemWidget extends StatelessWidget {
               AppNavigator.toWebView(href ?? '');
             },
             imageBuilder: (uri, title, alt) {
-              return NetImage(uri.toString());
+              return GestureDetector(
+                onTap: () {
+                  Utils.showImageViewer(
+                    0,
+                    [
+                      uri.toString(),
+                    ],
+                  );
+                },
+                child: NetImage(
+                  uri.toString(),
+                ),
+              );
             },
           ),
         ],

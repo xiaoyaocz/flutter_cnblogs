@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_cnblogs/app/app_error.dart';
 import 'package:flutter_cnblogs/app/controller/base_controller.dart';
 import 'package:flutter_cnblogs/generated/locales.g.dart';
 import 'package:flutter_cnblogs/models/blogs/blog_comment_item_model.dart';
@@ -25,6 +26,12 @@ class BlogCommentController extends BasePageController<BlogCommentItemModel> {
       blogApp: blogApp,
       postId: postId,
     );
+  }
+
+  @override
+  void handleError(Object exception, {bool showPageError = false}) {
+    super.handleError(AppError("博客园API只支持显示2022以后的评论"),
+        showPageError: showPageError);
   }
 
   void showAddCommentDialog() async {

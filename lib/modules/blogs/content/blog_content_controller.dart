@@ -14,6 +14,7 @@ import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 import 'package:get/get.dart';
 import 'package:share_plus/share_plus.dart';
 import 'package:url_launcher/url_launcher_string.dart';
+import 'package:xpath_selector_html_parser/xpath_selector_html_parser.dart';
 
 class BlogContentController extends BaseWebViewController {
   final BlogsRequest request = BlogsRequest();
@@ -39,12 +40,19 @@ class BlogContentController extends BaseWebViewController {
     try {
       pageError.value = false;
       pageLoadding.value = true;
+
       var result = await request.getBlogContent(url: url);
-      //无法加载,使用WebView打开
-      if (result.id == 0) {
-        SmartDialog.showToast(LocaleKeys.blog_content_load_failure.tr);
-        Get.offAndToNamed(RoutePath.kWebView, arguments: url);
-        return;
+
+      if (result == null || result.id == 0) {
+        // API读取旧文章会失败，从Web中读取内容
+        var webResult = await getContentByWeb();
+        //无法加载,使用WebView打开
+        if (webResult == null) {
+          SmartDialog.showToast(LocaleKeys.blog_content_load_failure.tr);
+          Get.offAndToNamed(RoutePath.kWebView, arguments: url);
+          return;
+        }
+        result = webResult;
       }
       detail = result;
       title.value = result.title;
@@ -78,6 +86,49 @@ class BlogContentController extends BaseWebViewController {
       errorMsg.value = e.toString();
     } finally {
       pageLoadding.value = false;
+    }
+  }
+
+  /// 从Web中读取内容加载到APP
+  Future<BlogContentModel?> getContentByWeb() async {
+    try {
+      var result = await request.getBlogContentByWeb(url: url);
+      var id = int.tryParse(
+          RegExp(r"currentBlogId.=.(\d+);").firstMatch(result)?.group(1) ?? "");
+      var blogApp =
+          RegExp(r"currentBlogApp.=.'(.*?)';").firstMatch(result)?.group(1);
+      var content = RegExp(
+              r'id="cnblogs_post_body".*?>([\s\S]*?)<div.id="blog_post_info_block"',
+              multiLine: true)
+          .firstMatch(result)
+          ?.group(1);
+      var html = HtmlXPath.html(result);
+      var title = html.query('//h1[@class^="postTitle"]').node?.text;
+      var viewCount = int.tryParse(
+          html.query('//span[@id^="post_view_count"]').node?.text ?? "");
+      var commentCount = int.tryParse(
+          html.query('//span[@id^="post_comment_count"]').node?.text ?? "");
+      var postDate = html.query('//span[@id^="post-date"]').node?.text;
+
+      var author = html.query('//div[@class^="postDesc"]/a[1]').node?.text;
+      return BlogContentModel(
+        id: id ?? 0,
+        title: title ?? "",
+        url: url,
+        description: "",
+        viewCount: viewCount ?? 0,
+        diggCount: 0,
+        commentCount: commentCount ?? 0,
+        author: author ?? "",
+        avatar: "https://pic.cnblogs.com/face/sample_face.gif",
+        blogId: id ?? 0,
+        blogApp: blogApp ?? "",
+        dateAdded: postDate ?? "2000-01-01 11:11:11",
+        dateUpdated: postDate ?? "2000-01-01 11:11:11",
+        body: content ?? "",
+      );
+    } catch (e) {
+      return null;
     }
   }
 

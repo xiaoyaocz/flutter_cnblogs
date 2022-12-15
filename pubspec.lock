@@ -85,6 +85,13 @@ packages:
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "4.0.6"
+  expressions:
+    dependency: transitive
+    description:
+      name: expressions
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "0.2.4"
   extended_image:
     dependency: "direct main"
     description:
@@ -434,6 +441,13 @@ packages:
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "0.1.2"
+  petitparser:
+    dependency: transitive
+    description:
+      name: petitparser
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "5.1.0"
   photo_view:
     dependency: "direct main"
     description:
@@ -462,6 +476,13 @@ packages:
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "4.2.4"
+  quiver:
+    dependency: transitive
+    description:
+      name: quiver
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "3.1.0"
   remixicon:
     dependency: "direct main"
     description:
@@ -469,6 +490,13 @@ packages:
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "1.0.0"
+  rxdart:
+    dependency: transitive
+    description:
+      name: rxdart
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "0.27.7"
   share_plus:
     dependency: "direct main"
     description:
@@ -628,6 +656,20 @@ packages:
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "0.2.0+2"
+  xpath_selector:
+    dependency: "direct main"
+    description:
+      name: xpath_selector
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "3.0.1"
+  xpath_selector_html_parser:
+    dependency: "direct main"
+    description:
+      name: xpath_selector_html_parser
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "3.0.0"
 sdks:
   dart: ">=2.18.2 <3.0.0"
   flutter: ">=3.3.0"

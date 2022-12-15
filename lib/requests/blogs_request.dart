@@ -135,17 +135,34 @@ class BlogsRequest {
 
   /// 获取博文内容
   /// - https://api.cnblogs.com/api/blogposts/{id}/body
-  Future<BlogContentModel> getBlogContent({required String url}) async {
+  Future<BlogContentModel?> getBlogContent({required String url}) async {
+    try {
+      var result = await HttpClient.instance.get(
+        '/api/blog/v2/blogposts/url/${Uri.encodeComponent(url)}',
+        queryParameters: {
+          'includeTags': true,
+          'includeCategories': true,
+        },
+        withApiAuth: true,
+      );
+
+      return BlogContentModel.fromJson(result);
+    } catch (e) {
+      return null;
+    }
+  }
+
+  /// 获取博文内容
+  /// - https://api.cnblogs.com/api/blogposts/{id}/body
+  Future<String> getBlogContentByWeb({required String url}) async {
     var result = await HttpClient.instance.get(
-      '/api/blog/v2/blogposts/url/${Uri.encodeComponent(url)}',
-      queryParameters: {
-        'includeTags': true,
-        'includeCategories': true,
-      },
+      url,
+      baseUrl: "",
+      responseType: ResponseType.plain,
       withApiAuth: true,
     );
 
-    return BlogContentModel.fromJson(result);
+    return result;
   }
 
   /// 获取知识库内容
