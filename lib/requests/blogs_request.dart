@@ -224,7 +224,7 @@ class BlogsRequest {
         'pageIndex': pageIndex,
         'pageSize': pageSize,
       },
-      withUserAuth: true,
+      withApiAuth: true,
     );
     for (var item in result) {
       ls.add(BlogCommentItemModel.fromJson(item));
