@@ -44,6 +44,9 @@ jobs:
         with:
           flutter-version: '3.7.1'
           cache: true 
+      #更新Flutter的packages
+      - name: Flutter update packages
+        run: flutter update-packages --force-upgrade
       - name: Restore packages
         run: flutter pub get
       #打包APK
