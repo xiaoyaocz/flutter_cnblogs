@@ -1,5 +1,5 @@
 name: flutter_cnblogs
-version: 1.0.4+10004
+version: 1.0.5+10005
 description: "博客园Flutter客户端"
 environment: 
   sdk: '>=2.18.2 <3.0.0'
