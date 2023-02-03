@@ -22,15 +22,15 @@ class StatusesCommentItemModel {
 
   factory StatusesCommentItemModel.fromJson(Map<String, dynamic> json) =>
       StatusesCommentItemModel(
-        id: asT<int>(json['Id'])!,
-        content: asT<String>(json['Content'])!,
-        dateAdded: asT<String>(json['DateAdded'])!,
-        statusId: asT<int>(json['StatusId'])!,
-        userAlias: asT<String>(json['UserAlias'])!,
-        userDisplayName: asT<String>(json['UserDisplayName'])!,
-        userIconUrl: asT<String>(json['UserIconUrl'])!,
-        userId: asT<int>(json['UserId'])!,
-        userGuid: asT<String>(json['UserGuid'])!,
+        id: asT<int>(json['id'])!,
+        content: asT<String>(json['content'])!,
+        dateAdded: asT<String>(json['dateAdded'])!,
+        statusId: asT<int>(json['statusId'])!,
+        userAlias: asT<String>(json['userAlias'])!,
+        userDisplayName: asT<String>(json['userDisplayName'])!,
+        userIconUrl: asT<String>(json['userIconUrl'])!,
+        userId: asT<int>(json['userId'])!,
+        userGuid: asT<String>(json['userGuid'])!,
       );
 
   int id;
