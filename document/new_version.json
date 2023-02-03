@@ -1,6 +1,6 @@
 {
-    "version": "1.0.3",
-    "version_num": 10003,
-    "version_desc": "1. 修复跳转用户博客加载错误\n2. 修复WebView未初始化问题\n3. 修复iOS锚点跳转问题\n4. 修复评论链接无法跳转、图片无法点击\n5. 支持博问回答的评论显示\n6. 修复旧文章无法加载的问题",
+    "version": "1.0.4",
+    "version_num": 10004,
+    "version_desc": "1. 修复未登录无法加载评论问题\n2. 修复闪存无法加载问题",
     "download_url": "https://github.com/xiaoyaocz/flutter_cnblogs/releases"
 }

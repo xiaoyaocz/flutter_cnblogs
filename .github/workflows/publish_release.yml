@@ -42,7 +42,7 @@ jobs:
       - name: Flutter action
         uses: subosito/flutter-action@v2
         with:
-          flutter-version: '3.3.9'
+          flutter-version: '3.7.1'
           cache: true 
       - name: Restore packages
         run: flutter pub get
