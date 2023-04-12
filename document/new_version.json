@@ -1,6 +1,6 @@
 {
-    "version": "1.0.5",
-    "version_num": 10005,
-    "version_desc": "1. 修复未登录无法加载评论问题\n2. 修复闪存无法加载问题",
+    "version": "1.0.6",
+    "version_num": 10006,
+    "version_desc": "1. 修复加载问题 #3",
     "download_url": "https://github.com/xiaoyaocz/flutter_cnblogs/releases"
 }
