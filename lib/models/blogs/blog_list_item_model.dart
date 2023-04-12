@@ -24,17 +24,17 @@ class BlogListItemModel {
 
   factory BlogListItemModel.fromJson(Map<String, dynamic> json) =>
       BlogListItemModel(
-        id: asT<int>(json['Id'])!,
-        title: asT<String>(json['Title'])!,
-        url: asT<String>(json['Url'])!,
-        description: asT<String>(json['Description'])!,
-        author: asT<String>(json['Author'])!,
-        blogapp: asT<String>(json['BlogApp'])!,
-        avatar: asT<String>(json['Avatar'])!,
-        postdate: asT<String>(json['PostDate'])!,
-        viewcount: asT<int>(json['ViewCount'])!,
-        commentcount: asT<int>(json['CommentCount'])!,
-        diggcount: asT<int>(json['DiggCount'])!,
+        id: asT<int?>(json['Id']) ?? 0,
+        title: asT<String?>(json['Title']) ?? "",
+        url: asT<String?>(json['Url']) ?? "",
+        description: asT<String?>(json['Description']) ?? "",
+        author: asT<String?>(json['Author']) ?? "",
+        blogapp: asT<String?>(json['BlogApp']) ?? "",
+        avatar: asT<String?>(json['Avatar']) ?? "",
+        postdate: asT<String?>(json['PostDate']) ?? "",
+        viewcount: asT<int?>(json['ViewCount']) ?? 0,
+        commentcount: asT<int?>(json['CommentCount']) ?? 0,
+        diggcount: asT<int?>(json['DiggCount']) ?? 0,
       );
 
   int id;

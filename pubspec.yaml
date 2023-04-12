@@ -15,7 +15,7 @@ dependencies:
   hive: 2.2.3 #持久化存储
   hive_flutter: 1.1.0 #持久化存储
   logger: 1.1.0 #日志
-  intl: 0.18.0 #国际化
+  intl: 0.17.0 #国际化
   flutter_dotenv: ^5.0.2 #ENV
   xpath_selector: ^3.0.1 #XPATH
   xpath_selector_html_parser: ^3.0.0 #XPATH
@@ -45,6 +45,9 @@ dependencies:
     sdk: flutter
   flutter_localizations: 
     sdk: flutter
+
+dependency_overrides:
+  intl: ^0.17.0
 
 dev_dependencies: 
   flutter_lints: ^2.0.0

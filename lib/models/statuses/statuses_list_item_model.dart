@@ -26,17 +26,17 @@ class StatusesListItemModel {
 
   factory StatusesListItemModel.fromJson(Map<String, dynamic> json) =>
       StatusesListItemModel(
-        id: asT<int>(json['id'])!,
-        content: asT<String>(json['content'])!,
-        isPrivate: asT<bool>(json['isPrivate'])!,
-        isLucky: asT<bool>(json['isLucky'])!,
-        commentCount: asT<int>(json['commentCount'])!,
-        dateAdded: asT<String>(json['dateAdded'])!,
-        userAlias: asT<String>(json['userAlias'])!,
-        userDisplayName: asT<String>(json['userDisplayName'])!,
-        userIconUrl: asT<String>(json['userIconUrl'])!,
-        userId: asT<int>(json['userId'])!,
-        userGuid: asT<String>(json['userGuid'])!,
+        id: asT<int?>(json['Id']) ?? 0,
+        content: asT<String?>(json['Content']) ?? "",
+        isPrivate: asT<bool?>(json['IsPrivate']) ?? false,
+        isLucky: asT<bool?>(json['IsLucky']) ?? false,
+        commentCount: asT<int?>(json['CommentCount']) ?? 0,
+        dateAdded: asT<String?>(json['DateAdded']) ?? "",
+        userAlias: asT<String?>(json['UserAlias']) ?? "",
+        userDisplayName: asT<String?>(json['UserDisplayName']) ?? "",
+        userIconUrl: asT<String?>(json['UserIconUrl']) ?? "",
+        userId: asT<int?>(json['UserId']) ?? 0,
+        userGuid: asT<String?>(json['UserGuid']) ?? "",
 
         // API没有返回是啥星星，只能随机加一个了
         luckyIndex: Random().nextInt(10),

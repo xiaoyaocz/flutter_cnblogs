@@ -55,8 +55,9 @@ class Log {
 
   static void logPrint(dynamic obj) {
     addDebugLog(obj.toString(), Colors.red);
-    //logger.e(obj.toString(), obj, obj?.stackTrace);
-    if (kDebugMode) {
+    if (obj is Error) {
+      Log.e(obj.toString(), obj.stackTrace ?? StackTrace.current);
+    } else if (kDebugMode) {
       print(obj);
     }
   }
