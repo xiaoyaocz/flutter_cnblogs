@@ -1,6 +1,6 @@
 {
-    "version": "1.0.6",
-    "version_num": 10006,
-    "version_desc": "1. 修复加载问题 #3",
+    "version": "1.0.7",
+    "version_num": 10007,
+    "version_desc": "1. 修复博文评论错误\n2. 更新Flutter版本至3.13.4",
     "download_url": "https://github.com/xiaoyaocz/flutter_cnblogs/releases"
 }
