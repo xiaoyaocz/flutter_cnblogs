@@ -20,13 +20,13 @@ class BlogCommentItemModel {
 
   factory BlogCommentItemModel.fromJson(Map<String, dynamic> json) =>
       BlogCommentItemModel(
-        id: asT<int>(json['Id'])!,
-        body: asT<String>(json['Body'])!,
-        author: asT<String>(json['Author'])!,
-        authorUrl: asT<String>(json['AuthorUrl'])!,
-        faceUrl: asT<String>(json['FaceUrl'])!,
-        floor: asT<int>(json['Floor'])!,
-        dateAdded: asT<String>(json['DateAdded'])!,
+        id: asT<int?>(json['Id']) ?? 0,
+        body: asT<String?>(json['Body']) ?? "",
+        author: asT<String?>(json['Author']) ?? "",
+        authorUrl: asT<String?>(json['AuthorUrl']) ?? "",
+        faceUrl: asT<String?>(json['FaceUrl']) ?? "",
+        floor: asT<int?>(json['Floor']) ?? 0,
+        dateAdded: asT<String?>(json['DateAdded']) ?? "",
       );
 
   int id;

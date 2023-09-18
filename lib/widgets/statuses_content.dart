@@ -87,6 +87,7 @@ class StatusesContent extends StatelessWidget {
         ),
         children: children,
       ),
+      scrollPhysics: const NeverScrollableScrollPhysics(),
     );
   }
 

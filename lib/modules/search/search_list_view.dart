@@ -40,6 +40,7 @@ class SearchListView extends StatelessWidget {
           return ListTile(
             title: Html(
               data: item.title ?? '',
+              shrinkWrap: true,
             ),
           );
         },

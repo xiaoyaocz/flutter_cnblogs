@@ -13,6 +13,7 @@ class CustomHtml extends StatelessWidget {
   Widget build(BuildContext context) {
     return Html(
       data: content,
+      shrinkWrap: true,
       style: {
         "body": Style(
           padding: HtmlPaddings.zero,
