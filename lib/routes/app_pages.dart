@@ -47,7 +47,7 @@ class AppPages {
       name: RoutePath.kSearch,
       page: () => const SearchPage(),
       binding: BindingsBuilder.put(
-        () => SearchController(Get.arguments),
+        () => AppSearchController(Get.arguments),
       ),
     ),
   ]

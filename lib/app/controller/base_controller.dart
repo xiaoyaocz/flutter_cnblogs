@@ -1,11 +1,11 @@
 import 'dart:async';
 
+import 'package:easy_refresh/easy_refresh.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_cnblogs/app/app_error.dart';
 import 'package:flutter_cnblogs/app/event_bus.dart';
 import 'package:flutter_cnblogs/app/log.dart';
 
-import 'package:flutter_easyrefresh/easy_refresh.dart';
 import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 import 'package:get/get.dart';
 

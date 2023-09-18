@@ -7,13 +7,13 @@ import 'package:flutter_cnblogs/widgets/number_step_dialog.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
 
-class SearchController extends BaseController
+class AppSearchController extends BaseController
     with GetSingleTickerProviderStateMixin {
   SearchType type;
   final GlobalKey<ScaffoldState> scaffoldkey = GlobalKey();
   final TextEditingController searchTextController = TextEditingController();
   late TabController tabController;
-  SearchController(this.type) {
+  AppSearchController(this.type) {
     tabController = TabController(
         length: tabs.length, initialIndex: type.index, vsync: this);
   }

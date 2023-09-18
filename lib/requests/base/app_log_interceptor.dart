@@ -9,7 +9,7 @@ class AppLogInterceptor extends Interceptor {
   }
 
   @override
-  void onError(DioError err, ErrorInterceptorHandler handler) {
+  void onError(DioException err, ErrorInterceptorHandler handler) {
     var time =
         DateTime.now().millisecondsSinceEpoch - err.requestOptions.extra["ts"];
     Log.e('''【HTTP请求错误-${err.type}】 耗时:${time}ms
@@ -22,7 +22,7 @@ Request Query：${err.requestOptions.queryParameters}
 Request Data：${err.requestOptions.data}
 Request Headers：${err.requestOptions.headers}
 Response Headers：${err.response?.headers.map}
-Response Data：${err.response?.data}''', err.stackTrace ?? StackTrace.current);
+Response Data：${err.response?.data}''', err.stackTrace);
 
     super.onError(err, handler);
   }

@@ -5,7 +5,7 @@ import 'package:flutter_cnblogs/generated/locales.g.dart';
 import 'package:flutter_cnblogs/modules/user/home/user_home_controller.dart';
 import 'package:flutter_cnblogs/services/user_service.dart';
 import 'package:flutter_cnblogs/widgets/net_image.dart';
-import 'package:flutter_easyrefresh/easy_refresh.dart';
+import 'package:easy_refresh/easy_refresh.dart';
 import 'package:get/get.dart';
 import 'package:remixicon/remixicon.dart';
 import 'package:url_launcher/url_launcher_string.dart';
@@ -22,7 +22,7 @@ class UserHomePage extends GetView<UserHomeController> {
             : SystemUiOverlayStyle.dark,
         child: SafeArea(
           child: EasyRefresh(
-            header: MaterialHeader(),
+            header: const MaterialHeader(),
             onRefresh: UserService.instance.refreshProfile,
             child: ListView(
               padding: AppStyle.edgeInsetsA4,

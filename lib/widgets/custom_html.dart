@@ -15,16 +15,17 @@ class CustomHtml extends StatelessWidget {
       data: content,
       style: {
         "body": Style(
-          padding: EdgeInsets.zero,
+          padding: HtmlPaddings.zero,
           margin: Margins.zero,
         ),
         "p": Style(
           lineHeight: LineHeight.em(1.2),
         ),
       },
-      customRenders: {
-        tagMatcher("img"): CustomRender.widget(
-          widget: (context, buildChildren) {
+      extensions: [
+        TagExtension(
+          tagsToExtend: {"img"},
+          builder: (extensionContext) {
             return Padding(
               padding: AppStyle.edgeInsetsV8,
               child: GestureDetector(
@@ -32,20 +33,21 @@ class CustomHtml extends StatelessWidget {
                   Utils.showImageViewer(
                     0,
                     [
-                      context.tree.attributes["src"].toString(),
+                      extensionContext.attributes["src"].toString(),
                     ],
                   );
                 },
                 child: NetImage(
-                  context.tree.attributes["src"].toString(),
+                  extensionContext.attributes["src"].toString(),
                   borderRadius: 4,
                 ),
               ),
             );
           },
         ),
-        tagMatcher("pre"): CustomRender.widget(
-          widget: (context, buildChildren) {
+        TagExtension(
+          tagsToExtend: {"pre"},
+          builder: (extensionContext) {
             return Container(
               decoration: BoxDecoration(
                 color: Colors.grey.withOpacity(.1),
@@ -57,7 +59,7 @@ class CustomHtml extends StatelessWidget {
               child: SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
                 child: Text(
-                  context.tree.element!.text,
+                  extensionContext.element!.text,
                   softWrap: false,
                   style: const TextStyle(fontSize: 12),
                 ),
@@ -65,8 +67,8 @@ class CustomHtml extends StatelessWidget {
             );
           },
         ),
-      },
-      onLinkTap: (url, context, attributes, element) async {
+      ],
+      onLinkTap: (url, attributes, element) async {
         if (url != null) {
           await AppNavigator.toWebView(url);
         }

@@ -5,7 +5,7 @@ import 'package:flutter_cnblogs/modules/search/search_controller.dart';
 import 'package:flutter_cnblogs/modules/search/search_list_view.dart';
 import 'package:get/get.dart';
 
-class SearchPage extends GetView<SearchController> {
+class SearchPage extends GetView<AppSearchController> {
   const SearchPage({Key? key}) : super(key: key);
 
   @override

@@ -55,9 +55,9 @@ class QuestionDetailPage extends StatelessWidget {
                               ),
                             ),
                             margin: AppStyle.edgeInsetsR8,
-                            child: Row(
+                            child: const Row(
                               mainAxisSize: MainAxisSize.min,
-                              children: const [
+                              children: [
                                 Icon(
                                   Remix.check_line,
                                   size: 14,

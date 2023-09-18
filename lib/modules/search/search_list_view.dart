@@ -360,7 +360,7 @@ class SearchListView extends StatelessWidget {
       style: {
         "body": Style(
           margin: Margins.zero,
-          padding: EdgeInsets.zero,
+          padding: HtmlPaddings.zero,
           fontSize: FontSize(16),
         ),
       },
@@ -375,7 +375,7 @@ class SearchListView extends StatelessWidget {
       style: {
         "body": Style(
             margin: Margins.zero,
-            padding: EdgeInsets.zero,
+            padding: HtmlPaddings.zero,
             fontSize: FontSize(14),
             color: Colors.grey,
             maxLines: 2,

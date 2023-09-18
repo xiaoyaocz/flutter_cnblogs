@@ -34,15 +34,7 @@ void main() async {
     statusBarIconBrightness: Brightness.dark,
   );
   SystemChrome.setSystemUIOverlayStyle(systemUiOverlayStyle);
-  runZonedGuarded(
-    () {
-      runApp(const MyApp());
-    },
-    (error, stackTrace) {
-      //全局异常
-      Log.e(error.toString(), stackTrace);
-    },
-  );
+  runApp(const MyApp());
 }
 
 Future initServices() async {

@@ -1,6 +1,5 @@
 import 'dart:io';
 
-import 'package:cross_file/cross_file.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_cnblogs/app/app_style.dart';
 import 'package:flutter_cnblogs/app/log.dart';

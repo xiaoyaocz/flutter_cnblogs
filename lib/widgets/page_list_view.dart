@@ -1,11 +1,10 @@
+import 'package:easy_refresh/easy_refresh.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_cnblogs/app/controller/base_controller.dart';
 import 'package:flutter_cnblogs/widgets/status/app_empty_widget.dart';
 import 'package:flutter_cnblogs/widgets/status/app_error_widget.dart';
 import 'package:flutter_cnblogs/widgets/status/app_loadding_widget.dart';
-
 import 'package:flutter_cnblogs/widgets/status/app_not_login_widget.dart';
-import 'package:flutter_easyrefresh/easy_refresh.dart';
 import 'package:get/get.dart';
 
 typedef IndexedWidgetBuilder = Widget Function(BuildContext context, int index);
@@ -35,21 +34,20 @@ class PageListView extends StatelessWidget {
       () => Stack(
         children: [
           EasyRefresh(
-            header: MaterialHeader(
-              completeDuration: const Duration(milliseconds: 400),
+            header: const MaterialHeader(),
+            footer: const MaterialFooter(
+              infiniteOffset: 100,
+              clamping: false,
             ),
-            footer: MaterialFooter(
-              completeDuration: const Duration(milliseconds: 400),
-            ),
-            scrollController: pageController.scrollController,
             controller: pageController.easyRefreshController,
-            firstRefresh: firstRefresh,
+            refreshOnStart: firstRefresh,
             onLoad: pageController.loadData,
             onRefresh: pageController.refreshData,
             child: ListView.separated(
               padding: padding,
               itemCount: pageController.list.length,
               itemBuilder: itemBuilder,
+              controller: pageController.scrollController,
               separatorBuilder:
                   separatorBuilder ?? (context, i) => const SizedBox(),
             ),

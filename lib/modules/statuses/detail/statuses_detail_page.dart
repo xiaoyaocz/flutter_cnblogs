@@ -1,3 +1,4 @@
+import 'package:easy_refresh/easy_refresh.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_cnblogs/app/app_style.dart';
 import 'package:flutter_cnblogs/generated/locales.g.dart';
@@ -8,7 +9,6 @@ import 'package:flutter_cnblogs/widgets/status/app_loadding_widget.dart';
 import 'package:flutter_cnblogs/widgets/status/app_not_login_widget.dart';
 import 'package:flutter_cnblogs/widgets/items/statuses_comment_item_widget.dart';
 import 'package:flutter_cnblogs/widgets/items/statuses_item_widget.dart';
-import 'package:flutter_easyrefresh/easy_refresh.dart';
 import 'package:get/get.dart';
 import 'package:sticky_headers/sticky_headers.dart';
 
@@ -24,7 +24,7 @@ class StatusesDetailPage extends GetView<StatusesDetailController> {
       body: Obx(
         () => EasyRefresh(
           onRefresh: controller.refreshData,
-          header: MaterialHeader(),
+          header: const MaterialHeader(),
           child: ListView(
             padding: AppStyle.edgeInsetsA12,
             children: [

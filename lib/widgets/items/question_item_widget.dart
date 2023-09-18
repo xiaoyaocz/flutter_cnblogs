@@ -82,9 +82,9 @@ class QuestionItemWidget extends StatelessWidget {
                                   ),
                                 ),
                                 margin: AppStyle.edgeInsetsR4,
-                                child: Row(
+                                child: const Row(
                                   mainAxisSize: MainAxisSize.min,
-                                  children: const [
+                                  children: [
                                     Icon(
                                       Remix.check_line,
                                       size: 14,

@@ -22,9 +22,9 @@ class HttpClient {
     dio = Dio(
       BaseOptions(
         baseUrl: Api.kBaseUrl,
-        connectTimeout: 15 * 1000,
-        receiveTimeout: 15 * 1000,
-        sendTimeout: 15 * 1000,
+        connectTimeout: const Duration(seconds: 15),
+        receiveTimeout: const Duration(seconds: 15),
+        sendTimeout: const Duration(seconds: 15),
       ),
     );
     dio.interceptors.addAll([
@@ -270,8 +270,8 @@ class HttpClient {
   /// 可以放到interceptor中
   Future<bool> handelError(
       Object e, bool withApiAuth, bool withUserAuth, bool isRetry) async {
-    if (e is DioError) {
-      if (e.type == DioErrorType.response) {
+    if (e is DioException) {
+      if (e.type == DioExceptionType.badResponse) {
         var msg = '';
         if (e.response?.data is Map) {
           Map? data = e.response?.data;
