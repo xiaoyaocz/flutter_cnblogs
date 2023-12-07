@@ -18,6 +18,10 @@
 
 ## 开发
 
+## 环境
+
+Flutter：3.13.9
+
 ### 说明
 
 开发前请先[申请博客园API KEY](https://oauth.cnblogs.com/)，在根目录创建`.env`文件并写入以下内容
