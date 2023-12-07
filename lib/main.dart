@@ -67,6 +67,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       title: LocaleKeys.app_name.tr,
+      onGenerateTitle: (context) => LocaleKeys.app_name.tr,
       theme: AppStyle.lightTheme,
       darkTheme: AppStyle.darkTheme,
       themeMode:
