@@ -2,7 +2,7 @@
 
 使用Flutter编写的博客园客户端，支持iOS及Android。
 
-基于[博客园开放API](https://api.cnblogs.com/help)开发；受制于API，部分功能可能并不完善。
+基于[博客园开放API](https://api.cnblogs.com/help)开发；受限于API，部分功能可能并不完善。
 
 ![浅色模式](/screenshot/screenshot_light.jpg)
 
@@ -48,8 +48,6 @@ CLIENT_SECRET=【申请的CLIENT_SECRET】
 
 - 博客
     - [ ] 检查博文收藏状态(API似乎有问题)
-- 新闻
-    - [ ] 新闻评论(博客园已关闭新闻评论)
 - 博问
     - [ ] 删除回答
     - [ ] 修改回答

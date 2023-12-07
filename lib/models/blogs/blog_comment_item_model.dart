@@ -36,7 +36,7 @@ class BlogCommentItemModel {
   String faceUrl;
   int floor;
   String dateAdded;
-  DateTime get postDateTime => DateTime.parse(dateAdded);
+  DateTime? get postDateTime => DateTime.tryParse(dateAdded);
 
   @override
   String toString() {

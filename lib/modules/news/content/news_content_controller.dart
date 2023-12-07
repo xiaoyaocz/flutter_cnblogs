@@ -4,6 +4,7 @@ import 'package:flutter_cnblogs/app/controller/base_webview_controller.dart';
 import 'package:flutter_cnblogs/app/utils.dart';
 import 'package:flutter_cnblogs/models/news/news_list_item_model.dart';
 import 'package:flutter_cnblogs/requests/news_request.dart';
+import 'package:flutter_cnblogs/routes/app_navigation.dart';
 import 'package:flutter_inappwebview/flutter_inappwebview.dart';
 import 'package:get/get.dart';
 import 'package:share_plus/share_plus.dart';
@@ -13,7 +14,9 @@ class NewsContentController extends BaseWebViewController {
   final NewsRequest request = NewsRequest();
   final NewsListItemModel item;
 
-  NewsContentController(this.item);
+  NewsContentController(this.item) {
+    commentCount.value = item.commentCount;
+  }
 
   @override
   void onWebViewCreated(InAppWebViewController controller) {
@@ -21,11 +24,13 @@ class NewsContentController extends BaseWebViewController {
     loadData();
   }
 
+  var commentCount = 0.obs;
   Future loadData() async {
     try {
       pageError.value = false;
       pageLoadding.value = true;
       var content = await request.getNewsContent(id: item.id);
+
       var commonScript = await getCommonScript();
       var style = await loadStyle();
       var htmlTemplate = await loadTemplate();
@@ -68,6 +73,12 @@ class NewsContentController extends BaseWebViewController {
     launchUrlString(
       'https://news.cnblogs.com/n/${item.id}/',
       mode: LaunchMode.externalApplication,
+    );
+  }
+
+  void openComment() {
+    AppNavigator.toNewsComment(
+      newsId: item.id,
     );
   }
 }

@@ -8,6 +8,8 @@ import 'package:flutter_cnblogs/modules/blogs/knowledge_content/knowledge_conten
 import 'package:flutter_cnblogs/modules/blogs/knowledge_content/knowledge_content_page.dart';
 import 'package:flutter_cnblogs/modules/indexed/indexed_controller.dart';
 import 'package:flutter_cnblogs/modules/indexed/indexed_page.dart';
+import 'package:flutter_cnblogs/modules/news/comment/news_comment_controller.dart';
+import 'package:flutter_cnblogs/modules/news/comment/news_comment_page.dart';
 import 'package:flutter_cnblogs/modules/news/content/news_content_controller.dart';
 import 'package:flutter_cnblogs/modules/news/content/news_content_page.dart';
 import 'package:flutter_cnblogs/modules/other/web_view/web_view_controller.dart';
@@ -112,6 +114,16 @@ class AppPages {
         page: () => const NewsContentPage(),
         binding: BindingsBuilder.put(
           () => NewsContentController(Get.arguments),
+        ),
+      ),
+      // 新闻评论
+      GetPage(
+        name: RoutePath.kNewsComment,
+        page: () => const NewsCommentPage(),
+        binding: BindingsBuilder.put(
+          () => NewsCommentController(
+            newsId: int.parse(Get.parameters["newsId"].toString()),
+          ),
         ),
       ),
     ])

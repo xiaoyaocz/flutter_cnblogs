@@ -49,7 +49,7 @@ class QuestionsHomeController extends GetxController
   }
 
   void toSearch() {
-    AppNavigator.toSearch(SearchType.news);
+    AppNavigator.toSearch(SearchType.question);
   }
 
   @override

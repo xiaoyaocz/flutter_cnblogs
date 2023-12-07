@@ -150,4 +150,16 @@ class AppNavigator {
       },
     );
   }
+
+  /// 跳转至博文评论
+  static Future toNewsComment({
+    required int newsId,
+  }) async {
+    return await Get.toNamed(
+      RoutePath.kNewsComment,
+      parameters: {
+        "newsId": newsId.toString(),
+      },
+    );
+  }
 }

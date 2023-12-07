@@ -251,6 +251,7 @@ class QuestionDetailPage extends StatelessWidget {
     return Padding(
       padding: AppStyle.edgeInsetsV12,
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           Row(
             children: [

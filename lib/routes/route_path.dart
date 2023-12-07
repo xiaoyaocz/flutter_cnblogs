@@ -44,4 +44,7 @@ class RoutePath {
 
   /// 回答评论
   static const kAnswerComment = "/question/answer/comment";
+
+  /// 新闻评论
+  static const kNewsComment = "/news/comment";
 }

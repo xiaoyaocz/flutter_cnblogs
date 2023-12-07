@@ -5,6 +5,7 @@ import 'package:flutter_cnblogs/widgets/status/app_error_widget.dart';
 import 'package:flutter_cnblogs/widgets/status/app_loadding_widget.dart';
 import 'package:flutter_inappwebview/flutter_inappwebview.dart';
 import 'package:get/get.dart';
+import 'package:remixicon/remixicon.dart';
 
 class NewsContentPage extends GetView<NewsContentController> {
   const NewsContentPage({Key? key}) : super(key: key);
@@ -59,6 +60,43 @@ class NewsContentPage extends GetView<NewsContentController> {
             ),
           ),
         ],
+      ),
+      bottomNavigationBar: Obx(
+        () => Visibility(
+          visible:
+              !controller.pageLoadding.value && !controller.pageError.value,
+          child: BottomAppBar(
+            child: SizedBox(
+              height: 56,
+              child: Row(
+                children: [
+                  Expanded(
+                    child: TextButton.icon(
+                      onPressed: controller.openComment,
+                      icon: const Icon(
+                        Remix.message_2_line,
+                        size: 20,
+                      ),
+                      label: Text(controller.commentCount > 0
+                          ? controller.commentCount.toString()
+                          : LocaleKeys.blog_content_comment.tr),
+                    ),
+                  ),
+                  Expanded(
+                    child: TextButton.icon(
+                      onPressed: controller.share,
+                      icon: const Icon(
+                        Remix.share_line,
+                        size: 20,
+                      ),
+                      label: Text(LocaleKeys.blog_content_share.tr),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ),
       ),
     );
   }
